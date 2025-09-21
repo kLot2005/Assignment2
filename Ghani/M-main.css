@@ -9,12 +9,16 @@ body {
 }
 
 main {
-  flex: 1;
-  height: auto !important;
+    border-radius: 10px;
+    background-color: white;
+    margin: 5%;
+    flex: 1;
+    height: auto !important;
 }
 
 
 .d-flax {
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
