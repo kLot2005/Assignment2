@@ -66,3 +66,26 @@ main {
   margin: 0 15px 10px 0;
   width: 200px;
 }
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #014F86;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.comment-form button {
+    background: #012A4A;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background: #014F86;
+}
