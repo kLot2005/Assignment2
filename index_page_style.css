@@ -142,4 +142,8 @@ main section {
   font-size: 1rem;
 }
 
+#updates {
+  scroll-margin-top: 80px;
+}
+
 /* Individual styles!!!!!! */
