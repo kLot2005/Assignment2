@@ -42,6 +42,7 @@ main {
     border: 1px solid #014F86;
     border-radius: 10px;
     margin: 10px;
+    color: brown;
 }
 .box-right {
     max-width: 345px;
