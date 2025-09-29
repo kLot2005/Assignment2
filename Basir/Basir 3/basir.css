@@ -1,0 +1,137 @@
+/* Page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar with Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Content area with Grid */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+aside {
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #e70f0f;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 6px 0;
+  font-weight: bold;
+}
+
+/* Center images */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.circular {
+  border-radius: 50%;
+}
+
+/* Form styling */
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input, button {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  background: rgb(241, 10, 10);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: crimson;
+}
+
+/* Footer with Flexbox */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 8px 0;
+  }
+}
