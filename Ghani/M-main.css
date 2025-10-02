@@ -90,3 +90,35 @@ main {
 .comment-form button:hover {
     background: #014F86;
 }
+nav a {
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #014F86;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
