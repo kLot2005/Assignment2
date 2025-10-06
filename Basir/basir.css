@@ -1,84 +1,51 @@
-/* Page styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #f7f7f7;
-  color: #333;
-  margin: 0;
-  padding: 0;
+font-family: 'Segoe UI', Arial, sans-serif;
+background: #f8f9fa;
+margin: 0;
+padding: 0;
 }
 
-header {
-  background: #222;
-  color: white;
-  padding: 15px;
-  text-align: center;
+/* Headings */
+h1, h2, h3, h4 {
+font-weight: 600;
 }
 
-main {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+/* Navbar links hover */
+.navbar a:hover {
+text-decoration: underline;
 }
 
-h1, h2 {
-  text-align: center;
-  color: darkred;
+/* Cards and carousel */
+.card {
+border-radius: 10px;
+transition: transform 0.3s ease;
+}
+.card:hover {
+transform: translateY(-5px);
 }
 
-p {
-  text-align: justify;
-  line-height: 1.6;
+/* Carousel images */
+.carousel img {
+height: 400px;
+object-fit: cover;
 }
 
-ul {
-  list-style: square;
-  padding-left: 40px;
+/* Footer */
+.footer {
+background-color: #212529;
+color: white;
 }
 
-ul li {
-  margin: 6px 0;
-  font-weight: bold;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.navbar-brand {
+text-align: center;
+width: 100%;
 }
-
-/* Center images */
-img {
-  display: block;
-  margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+.card img {
+height: 250px;
 }
-
-/* Circular version */
-.circular {
-  border-radius: 50%;
+h1 {
+font-size: 1.8rem;
 }
-
-/* Form styling */
-form {
-  margin-top: 20px;
-  text-align: center;
-}
-
-input, button {
-  padding: 8px;
-  margin: 5px;
-}
-
-button {
-  background: darkred;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background: crimson;
-}
-
-footer {
-  text-align: center;
-  background: #222;
-  color: white;
-  padding: 10px;
-  margin-top: 20px;
 }
