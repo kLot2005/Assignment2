@@ -1,0 +1,43 @@
+/* 
+ >=1200
+ 992 - 1199
+ 768 - 991
+ 576 - 768
+ 460 - 576
+ 414 - 460
+ 375 - 414
+ 320 - 375
+*/
+
+@media screen and (max-width: 1200px){
+    .club-info {
+       width: 66%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .box-right {
+        max-width: 281px;
+    }
+    .img-liver {
+        width: 250px;
+    }
+}
+@media screen and (max-width: 768px){
+    .box-right {
+        max-width: 228px;
+    }
+    .img-liver {
+        width: 200px;
+    }
+    .club-info {
+       width: 63%;
+    }
+    .img-logo {
+        width: 55px;
+        height: 55px;
+    }
+    .logo-block h1 {
+        font-size: 1.5em;
+    }
+}

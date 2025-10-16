@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Бекарыс Бишимбай, Мохаммад Басир Аюби, Гани Муратбаев">
+    <link rel="icon" type="image/svg+xml" href="../public/img/svgexport-1.svg">
+    <title>History</title>
+    <link rel="stylesheet" href="../Ghani/Main.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <span class="logo-block">
+                <a href="../index.html"><img class="img-logo" width="64" height="64" src="../public/img/svgexport-1.svg" alt="logo"></a>
+            </span>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="../Ghani/Liverpool.html">Liverpool</a></li>
+                    <li><a href="../Ghani/Chelsea.html">Chealsea</a></li>
+                    <li class="btn"><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero container">
+            <div class="hero--info">
+                <h1>Football History</h1>
+                <p>Football is an ancient ball game that has become a global sport. Originating in England, it has spread across the globe, uniting millions of people with passion and competition.</p>
+                <button class="lgn">Free registration</button>
+            </div>
+            <img src="../Ghani/img-club/football_fon.png" alt="">
+        </div>
+
+        <section class="color-section container">
+            <h2>Change Background</h2>
+            <button id="colorBtn">Change Background Color</button>
+        </section>
+
+        <script src="../Ghani/java-script/color.js"></script>
+
+
+        <section class="faq container">
+            <h2>Football FAQ</h2>
+
+            <div class="faq-item">
+                <button class="faq-question">⚽ What is football?</button>
+                <div class="faq-answer">
+                    <p>Football is a sport where two teams of eleven players compete to score goals using a spherical ball.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🌍 Where did football originate?</button>
+                <div class="faq-answer">
+                    <p>Modern football began in England during the 19th century and later spread worldwide.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">🏆 What are the biggest football tournaments?</button>
+                <div class="faq-answer">
+                    <p>The FIFA World Cup, UEFA Champions League, and Copa America are among the most famous tournaments.</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="../Ghani/java-script/accordion.js"></script>
+
+        <div id="popup" class="popup hidden">
+            <div class="popup-content">
+                <span id="closePopup">&times;</span>
+                <h2>Free Registration</h2>
+                <form id="registerForm" novalidate>
+                    <label>Username</label>
+                    <input type="text" id="username" required>
+
+                    <label>Email</label>
+                    <input type="email" id="email" required>
+
+                    <label>Password</label>
+                    <input type="password" id="password" required minlength="6">
+
+                    <label>Confirm Password</label>
+                    <input type="password" id="confirm" required>
+
+                    <button type="submit">Register</button>
+                    <p id="errorMsg" class="error"></p>
+                    <p id="successMsg" class="success"></p>
+                </form>
+            </div>
+        </div>
+
+        <script src="../Ghani/java-script/form.js"></script>
+
+        
+        <div id="subscribePopup" class="popup hidden">
+            <div class="popup-content">
+                <span id="closeSubscribe">&times;</span>
+                <h2>Subscribe to Football News</h2>
+                <form id="subscribeForm">
+                    <label for="subName">Your Name</label>
+                    <input type="text" id="subName" required>
+
+                    <label for="subEmail">Email</label>
+                    <input type="email" id="subEmail" required>
+
+                    <button type="submit">Subscribe</button>
+                    <p id="subMsg" class="success"></p>
+                </form>
+            </div>
+        </div>
+
+        <script src="../Ghani/java-script/popup.js"></script>
+
+    </div>
+
+    <footer class="footer container">
+        <p id="datetime"></p>
+        <p>Created by: Bishimbay Bekarys, MohammadBasir Ayoubi, Ghani Muratbaev</p>
+    </footer>
+
+    <script src="../Ghani/java-script/datetime.js"></script>
+
+</body>
+</html>

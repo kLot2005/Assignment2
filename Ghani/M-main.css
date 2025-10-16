@@ -32,7 +32,9 @@ main {
 }
 .box-main {
     display: flex;
-    justify-content: start;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    flex-wrap: wrap;
 }
 .center {
     justify-content: center;
@@ -66,6 +68,7 @@ main {
   float: right;
   margin: 0 15px 10px 0;
   width: 200px;
+  margin-left: auto;
 }
 
 .comment-form input,
@@ -98,27 +101,16 @@ nav a:hover {
   text-decoration: underline;
   color: #014F86;
 }
-.card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.card-row {
+header {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.club-info {
+  width: 73%;
+}
+.img-liver{
+  display: block;
+  margin: auto;
+  width: 300px;
 }
