@@ -46,3 +46,9 @@ document.getElementById('registerForm').addEventListener('submit', (e) => {
   successMsg.textContent = '✅ Registration successful!';
   document.getElementById('registerForm').reset();
 });
+
+document.getElementById('clearForm').addEventListener('click', () => {
+  registerForm.reset();
+  errorMsg.textContent = '';
+  successMsg.textContent = '';
+});

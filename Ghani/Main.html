@@ -16,9 +16,16 @@
             </span>
             <nav>
                 <ul>
+                    <li><select id="langSelect">
+                        <option value="ru">Русский</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select></li>
+                    <li><div class="toggle" id="themeToggle"><div class="toggle-ball"></div></div></li>
                     <li class="active"><a href="#">Home</a></li>
                     <li><a href="../Ghani/Liverpool.html">Liverpool</a></li>
                     <li><a href="../Ghani/Chelsea.html">Chealsea</a></li>
+                    <li><a href="../Basir/index.html">Basir</a></li>
                     <li class="btn"><a href="#">Login</a></li>
                 </ul>
             </nav>
@@ -29,7 +36,7 @@
                 <p>Football is an ancient ball game that has become a global sport. Originating in England, it has spread across the globe, uniting millions of people with passion and competition.</p>
                 <button class="lgn">Free registration</button>
             </div>
-            <img src="../Ghani/img-club/football_fon.png" alt="">
+            <img src="../Ghani/img-club/football_fon.png" alt="" style="padding: 0 125px 0 0;">
         </div>
 
         <section class="color-section container">
@@ -72,21 +79,25 @@
                 <span id="closePopup">&times;</span>
                 <h2>Free Registration</h2>
                 <form id="registerForm" novalidate>
-                    <label>Username</label>
-                    <input type="text" id="username" required>
+                <label>Username</label>
+                <input type="text" id="username" required>
 
-                    <label>Email</label>
-                    <input type="email" id="email" required>
+                <label>Email</label>
+                <input type="email" id="email" required>
 
-                    <label>Password</label>
-                    <input type="password" id="password" required minlength="6">
+                <label>Password</label>
+                <input type="password" id="password" required minlength="6">
 
-                    <label>Confirm Password</label>
-                    <input type="password" id="confirm" required>
+                <label>Confirm Password</label>
+                <input type="password" id="confirm" required>
 
+                <div class="btns">
                     <button type="submit">Register</button>
-                    <p id="errorMsg" class="error"></p>
-                    <p id="successMsg" class="success"></p>
+                    <button type="button" id="clearForm">Clear</button>
+                </div>
+
+                <p id="errorMsg" class="error"></p>
+                <p id="successMsg" class="success"></p>
                 </form>
             </div>
         </div>
@@ -113,6 +124,18 @@
 
         <script src="../Ghani/java-script/popup.js"></script>
 
+        <div class="color-section">
+            <h2>⚽ Football Players</h2>
+            <ul id="playerList"></ul>
+            <button id="loadPlayers">Load Players</button>
+        </div>
+
+        <div class="music-section">
+            <h2>🎵 Music Player</h2>
+            <button id="playMusic">Play Music</button>
+            <audio id="music" src="../Ghani/music/Tame Impala - The Less I Know The Better.mp3"></audio>
+        </div>
+
     </div>
 
     <footer class="footer container">
@@ -122,5 +145,14 @@
 
     <script src="../Ghani/java-script/datetime.js"></script>
 
+    <script>
+        const toggle = document.getElementById("themeToggle");
+
+        toggle.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+        });
+    </script>
+    <script src="../Ghani/java-script/lang.js"></script>
+    <script src="../Ghani/java-script/listplayer.js"></script>
 </body>
 </html>

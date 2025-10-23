@@ -1,8 +1,12 @@
+
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     color: #ffffff;
     font-size: 16px;
+    background-color: var(--background);
+    color: var(--text-color);
+    transition: background 0.4s, color 0.4s;
 }
 
 a {
@@ -24,8 +28,12 @@ img {
     width: 100%;
 }
 .container {
-    width: 1400px;
+    background-color: black;
+    max-width: 1400px;
+    width: 90%;
     margin: 0 auto;
+    border-radius: 100px;
+    padding: 40px;
 }
 
 header {
@@ -335,3 +343,164 @@ header nav ul li.btn a {
   margin: 5px 0;
   font-size: 16px;
 }
+
+:root {
+  --toggle-bg: #00f468;
+  --toggle-ball: #000000;
+  --background: #000000;
+  --text-color: #ffffff;
+}
+
+.toggle {
+   width: 60px;
+   height: 30px;
+   background-color: var(--toggle-bg);
+   border-radius: 30px;
+   position: relative;
+   cursor: pointer;
+   transition: background 0.4s;
+}
+
+.toggle-ball {
+  width: 26px;
+  height: 26px;
+  background-color: var(--toggle-ball);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.4s;
+}
+
+body.dark {
+  --toggle-bg: #00f468;
+  --toggle-ball: #000;
+}
+
+body.light {
+  --background: #EEF2FB;
+  --text-color: #000000;
+  --toggle-bg: #ddd;
+  --toggle-ball: #000;
+}
+body.light .toggle-ball {
+  transform: translateX(30px);
+}
+.hero, .section, .card, header, footer, .wrapper {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+#langSelect {
+  background-color: #00f468;
+  color: black; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  font-size: 16px;
+}
+
+
+.home-link {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+}
+
+  .player-section {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 120, 0.3);
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .player-section h2 {
+    color: #00ff9d;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ff9d;
+  }
+
+  #loadPlayers {
+    background: #00f468;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    color: #003300;
+  }
+
+  #loadPlayers:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00ff9d;
+  }
+
+  #playerList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+
+  #playerList li {
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+  }
+
+  #playerList li:hover {
+    background: rgba(0, 255, 157, 0.2);
+  }
+
+  /* 🎵 MUSIC SECTION */
+  .music-section {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 120, 0.3);
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+
+  .music-section h2 {
+    color: #00ff9d;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00ff9d;
+  }
+
+  #playMusic {
+    background: #00f468;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    color: #003300;
+  }
+
+  #playMusic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #00ff9d;
+  }
+
+  .active-music {
+    background: #00ff9d;
+    box-shadow: 0 0 20px #00ff9d;
+  }
