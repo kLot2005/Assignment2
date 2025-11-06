@@ -7,10 +7,14 @@ body {
     background-color: var(--background);
     color: var(--text-color);
     transition: background 0.4s, color 0.4s;
+    min-height: 100ph
 }
 
 a {
     text-decoration: none;
+}
+.img-fluid{
+  width: 500px;
 }
 img {
     max-width: 100%;
@@ -23,17 +27,17 @@ img {
   font-size: medium;
 } */
 .wrapper {
-    border: none;
-    background-color: black;
-    width: 100%;
+  border: none;
+  width: 100%;
+  background-color: var(--background);
 }
 .container {
-    background-color: black;
-    max-width: 1400px;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 100px;
-    padding: 40px;
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 20px; 
+  padding: 40px;
+  background-color: var(--background);
 }
 
 header {
@@ -43,6 +47,45 @@ header nav {
     float: right;
     width: 50%;
 }
+.header__burger__btn {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.header__burger__btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+  left: 5px;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+.header__burger__btn span:nth-child(1){
+  transform: translateY(-10px);
+}
+
+.header__burger__btn span:nth-child(3){
+  transform: translateY(10px);
+}
+
+.container.open .header__burger__btn span:nth-child(1){
+  transform: translateY(0) rotate(45deg);
+}
+
+.container.open .header__burger__btn span:nth-child(2){
+  opacity: 0;
+}
+
+.container.open .header__burger__btn span:nth-child(3){
+  transform: translateY(0) rotate(-45deg);
+}
+
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -91,7 +134,7 @@ header nav ul li.btn a {
     line-height: 170%;
     margin: 30px 0;
 }
-.hero--info .lgn {
+.lgn {
     background-color: #00F468;
     color:black;
     border-radius: 50px;
@@ -100,12 +143,12 @@ header nav ul li.btn a {
     transition: all 500ms ease;
     font-size: 17px;
 }
-.hero--info .lgn:hover {
+.lgn:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 .hero img{
-    position: absolute;
+    position: relative;
     top: 0px;
     right: 0;
 }
@@ -463,8 +506,6 @@ body.light .toggle-ball {
   #playerList li:hover {
     background: rgba(0, 255, 157, 0.2);
   }
-
-  /* 🎵 MUSIC SECTION */
   .music-section {
     text-align: center;
     margin: 50px auto;
@@ -504,3 +545,136 @@ body.light .toggle-ball {
     background: #00ff9d;
     box-shadow: 0 0 20px #00ff9d;
   }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+header form {
+  width: 190px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.hill_search {
+  position: relative;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00ff9d;
+  border-radius: 100px;
+  padding: 10px;
+  background: black;
+}
+
+
+header form div input[type="text"] {
+  border: none;
+  background-color: black;
+  color: white;
+  outline: none;
+  width: 100%;
+  padding-left: 28px; 
+  font-size: 14px;
+}
+
+
+header form div input[type="text"]::placeholder {
+  color: #00ff9d;
+  opacity: 0.7;
+}
+
+
+header form div input[type="submit"] {
+  background: url(../Ghani/img-club/search.png) no-repeat center;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+
+header form div input[type="submit"]:hover {
+  filter: brightness(1.3);
+}
+
+
+.spinner {
+  position: absolute;
+  left: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-top: 2px solid #00f468;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+#counter {
+  font-size: 40px;
+  color: #00f468;
+  text-align: center;
+  margin: 50px auto;
+  font-weight: bold;
+}
+
+.copy-btn {
+  background: #00f468;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.copy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ff9d;
+}
+
+.club-images {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.club-images img {
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 100, 0.3);
+  filter: blur(10px);
+  transition: filter 0.6s ease, transform 0.3s;
+}
+
+.club-images img.loaded {
+  filter: blur(0);
+  transform: scale(1.03);
+}
+
+header, .hero, section, footer {
+  background-color: transparent; 
+  color: var(--text-color);
+}
+

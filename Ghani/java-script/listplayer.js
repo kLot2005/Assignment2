@@ -16,19 +16,19 @@ document.getElementById("loadPlayers").addEventListener("click", () => {
       });
   });
 
-const music = document.getElementById("music");
-  const btn = document.getElementById("playMusic");
-  let playing = false;
+const playBtn = document.getElementById("playMusic");
+const audio = document.getElementById("music");
 
-  btn.addEventListener("click", () => {
-    if (!playing) {
-      music.play();
-      btn.textContent = "⏸️ Pause Music";
-      btn.classList.add("active-music");
-    } else {
-      music.pause();
-      btn.textContent = "🎵 Play Music";
-      btn.classList.remove("active-music");
-    }
-    playing = !playing;
-  });
+playBtn.addEventListener("click", () => {
+  console.log("button click");
+  if (audio.paused) {
+    audio.play();
+    playBtn.textContent = "Pause Music";
+  } else {
+    audio.pause();
+    playBtn.textContent = "Play Music";
+  }
+});
+
+console.log("music js loaded");
+
