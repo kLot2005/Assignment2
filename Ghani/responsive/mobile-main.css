@@ -9,7 +9,22 @@
 820v1180
 1024v1366
 */
-
+@media (max-width: 1400px) {
+    .faq-conteiner{
+        max-width: 1150px;
+    }
+    .music-section {
+        max-width: 1150px;
+    }
+}
+@media (max-width: 1200px) {
+    .faq-conteiner{
+        max-width: 965px;
+    }
+    .music-section {
+        max-width: 965px;
+    }
+}
 @media (max-width: 1000px) {
     .header__burger__btn {
         display: block;
@@ -17,31 +32,25 @@
     }
     .menu{
         position: absolute;
-        left: -200px;
+        left: -500px;
         top: 0;
         background-color: rgb(0, 0, 0);
-        width: 200px;
+        width: 500px;
+        height: 100vh;
+        position: fixed;
         z-index: 1;
         padding: 52px 20px 20px 20px;
         transition: transform .5s;
     }
-    .menu .ul {
-        display: block;
+    .menu ul{
+        flex-direction: column;
+        margin: 83px 29px 0px 44px;
     }
-    .menu .ul .li {
-        padding: 5px
-    }
-    .lgn {
+    .menu ul li {
         margin: 10px;
     }
-    nav.menu ul {
-    display: block;
-    text-align: center;
-    }
-
-    nav.menu ul li {
-        display:block;
-        margin: 10px 0; 
+    header nav ul li a {
+        color: white;
     }
     .menu {
         color: white;
@@ -52,9 +61,36 @@
         transform: translateX(100%);
     }
 }
-
-@media (max-width: 375px) {
-    .img-fluid{
-
+@media (max-width: 998px) {
+    .faq-conteiner{
+        max-width: 720px;
+    }
+    .music-section {
+        max-width: 720px;
+    }
+}
+@media (max-width: 768px) {
+    .img-fluid {
+        margin: 10px 0px 0 0;
+    }
+    .faq-conteiner{
+        max-width: 541px;
+    }
+    .music-section {
+        max-width: 541px;
+    }
+}
+@media (max-width: 576px) {
+    .faq-conteiner{
+        max-width: 590px;
+    }
+    .music-section {
+        max-width: 590px;
+    }
+}
+@media (max-width: 555px) {
+    .menu {
+        left: -300px;
+        width: 300px;
     }
 }

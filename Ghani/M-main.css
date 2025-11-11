@@ -11,11 +11,49 @@ nav {
 body {
   display: flex;
   flex-direction: column;
+  background-color: black;
+}
+.header__burger__btn{
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #C50525;
+}
+.header__burger__btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  left: 5px;
+  transition: .3s;
+
+}
+.header__burger__btn span:nth-child(1){
+  transform: translateY(-10px);
 }
 
+.header__burger__btn span:nth-child(3){
+  transform: translateY(10px);
+}
+
+header.open .header__burger__btn span:nth-child(1){
+  transform: translateY(0) rotate(45deg);
+}
+
+header.open .header__burger__btn span:nth-child(2){
+  opacity: 0;
+}
+
+header.open .header__burger__btn span:nth-child(3){
+  transform: translateY(0) rotate(-45deg);
+}
 main {
+  color: white;
+  border: 1px solid #C50525;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin: 5%;
     flex: 1;
     height: auto !important;
@@ -39,35 +77,34 @@ main {
     display: flex;
     justify-content: space-between; 
     align-items: flex-start; 
-    flex-wrap: wrap;
 }
 .center {
     justify-content: center;
 }
 .box {
     max-width: 1000px;
-    border: 1px solid #014F86;
+    border: 1px solid #C50525;
     border-radius: 10px;
     margin: 10px;
     color: brown;
 }
 .box-right {
     max-width: 345px;
-    border: 1px solid #014F86;
+    border: 1px solid #C50525;
     border-radius: 10px;
     margin: 10px;
 }
 .box-topic {
     text-align: center;
     color: white;
-    border: 1px solid #012A4A;
-    background-color: #012A4A;
+    border: 1px solid #C50525;
+    background-color: #C50525;
     border-radius: 10px 10px 0 0;
     padding: 5px;
 }
 .box-info {
     padding: 8px;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .img-right {
   float: right;
@@ -81,13 +118,13 @@ main {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
-    border: 1px solid #014F86;
+    border: 1px solid #C50525;
     border-radius: 5px;
     font-family: inherit;
 }
 
 .comment-form button {
-    background: #012A4A;
+    background: #C50525;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -96,7 +133,7 @@ main {
 }
 
 .comment-form button:hover {
-    background: #014F86;
+    background: #C50525;
 }
 nav a {
   transition: 0.3s;
@@ -119,3 +156,21 @@ header {
   margin: auto;
   width: 300px;
 }
+
+header {
+  background-color: black;
+}
+
+footer {
+  background-color: black;
+}
+
+hr {
+  background-color: #C50525;
+  color:#C50525;
+}
+
+h2 {
+  color: white;
+}
+

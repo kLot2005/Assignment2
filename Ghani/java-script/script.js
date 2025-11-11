@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       width: 16px;
       height: 16px;
       border: 2px solid #fff;
-      border-top: 2px solid #00f468;
+      border-top: 2px solid #C50525;
       border-radius: 50%;
       animation: spin 0.7s linear infinite;
       display: none;
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       top: 100%; /* делает, чтобы шло сразу под полем */
       left: 0;
       background: #111;
-      border: 1px solid #00f468;
+      border: 1px solid #C50525;
       border-radius: 8px;
       padding: 5px;
       list-style: none;
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       width: 100%; /* по ширине поля */
       color: #fff;
       z-index: 1000;
-      box-shadow: 0 4px 8px rgba(0, 255, 100, 0.3);
     }
 
     #suggestBox li {
@@ -57,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     #suggestBox li:hover {
-      background: #00f468;
+      background: #C50525;
       color: #000;
     }
   `;
@@ -169,7 +168,7 @@ bar.style.position = "fixed";
 bar.style.top = "0";
 bar.style.left = "0";
 bar.style.height = "5px";
-bar.style.background = "#00f468";
+bar.style.background = "#C50525";
 bar.style.width = "0";
 bar.style.zIndex = "9999";
 bar.style.transition = "width 0.2s linear";
@@ -206,7 +205,7 @@ window.addEventListener("scroll", () => {
 });
 
 // Part 3
-function showTempMessage(text, color = "#00f468") {
+function showTempMessage(text, color = "#C50525") {
   const msg = document.createElement("div");
   msg.textContent = text;
   Object.assign(msg.style, {
@@ -219,7 +218,6 @@ function showTempMessage(text, color = "#00f468") {
     borderRadius: "8px",
     fontWeight: "600",
     zIndex: "9999",
-    boxShadow: "0 0 15px rgba(0, 255, 100, 0.4)",
     opacity: "0",
     transition: "opacity 0.3s ease",
   });
